@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсолнух | Летнее кафе</title>
+    <style>
+        /* Цветовая палитра: Подсолнух 
+           Желтый: #FFC107 (Лепестки)
+           Темно-коричневый: #3E2723 (Семечки)
+           Зеленый: #558B2F (Стебель)
+           Кремовый: #FFFDE7 (Фон)
+        */
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            color: #3E2723;
+            background-color: #FFFDE7;
+            scroll-behavior: smooth;
+        }
+
+        /* Навигация */
+        nav {
+            background: #fff;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #FFC107;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #3E2723;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #558B2F;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: #FFC107; }
+
+        /* Герой секция */
+        header {
+            height: 70vh;
+            background: linear-gradient(rgba(62, 39, 35, 0.4), rgba(62, 39, 35, 0.4)), 
+                        url('https://images.unsplash.com/photo-1470137237906-d8a4f71e1966?auto=format&fit=crop&w=1400&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 { font-size: 4rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        header p { font-style: italic; font-size: 1.4rem; margin-top: 10px; }
+
+        /* Секции */
+        section { padding: 80px 10%; }
+        h2 { 
+            text-align: center; 
+            color: #558B2F; 
+            font-size: 2.5rem; 
+            margin-bottom: 40px;
+            border-bottom: 2px solid #FFC107;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+        }
+
+        /* О нас */
+        #about { background-color: #fff; text-align: center; line-height: 1.8; }
+        .about-content { max-width: 800px; margin: 0 auto; font-size: 1.2rem; }
+
+        /* Меню */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #FFC107;
+        }
+
+        .menu-card h3 { margin-top: 0; color: #3E2723; display: flex; justify-content: space-between; align-items: baseline; }
+        .price { color: #558B2F; font-size: 1.1rem; margin-left: 10px; }
+
+        /* Расположение */
+        #location { background: #F9FBE7; text-align: center; }
+        .contact-info { font-size: 1.2rem; margin-bottom: 30px; }
+
+        /* Подвал */
+        footer {
+            background: #3E2723;
+            color: #FFC107;
+            text-align: center;
+            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🌻 Подсолнух</div>
+        <ul class="nav-links">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#location">Где мы</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Подсолнух</h1>
+        <p>Ваше солнечное место в Абхазии</p>
+    </header>
+
+    <section id="about">
+        <h2>О нашем кафе</h2>
+        <div class="about-content">
+            <p>Добро пожаловать в <strong>«Подсолнух»</strong> — место, где всегда царит лето. Мы вдохновились теплом южного солнца и гостеприимством нашей родной земли. В нашем кафе мы готовим из свежих местных продуктов, чтобы каждый гость мог почувствовать настоящий вкус отдыха и уюта.</p>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Летнее Меню</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Золотистый латте <span class="price">250₽</span></h3>
+                <p>Пряный напиток с куркумой, медом и имбирем. Настоящая энергия солнца.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Салат «Семечко» <span class="price">450₽</span></h3>
+                <p>Микс свежей зелени, обжаренные семена подсолнуха, мягкий сыр и лимонная заправка.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Медовик домашний <span class="price">300₽</span></h3>
+                <p>Классический десерт с нежным кремом, приготовленный по семейному рецепту.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Травяной чай <span class="price">200₽</span></h3>
+                <p>Сбор из горных трав Абхазии с легким ароматом мяты и чабреца.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="location">
+        <h2>Как нас найти</h2>
+        <div class="contact-info">
+            <p><strong>Адрес:</strong> Республика Абхазия, г. Пицунда, ул. Набережная, д. 7</p>
+            <p><strong>Режим работы:</strong> Вторник — Воскресенье | 09:00 – 21:00</p>
+        </div>
+        <div style="background: #e0e0e0; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+            здесь будет карта города
+        </div>
+    </section>
+
+    <footer>
+        <p>Светите ярко. Живите солнечно.</p>
+        <p>&copy; 2026 Летнее кафе «Подсолнух» | Абхазия</p>
+    </footer>
+
+</body>
+</html>
